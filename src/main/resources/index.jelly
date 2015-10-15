@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  Ok this is my bugzilla auth plugin
+</div>
