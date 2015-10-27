@@ -95,8 +95,9 @@ public class BugzillaSecurityRealm extends AbstractPasswordBasedSecurityRealm {
     
     private boolean driverLoaded = false;
     private void loadDriver() throws DataAccessException {
-        if(driverLoaded) return;
+//        if(driverLoaded) return;
         try {
+            LOG.info("Loading driver class: " + dbDriverName);
             Class.forName(dbDriverName).newInstance();
             driverLoaded = true;
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException ex) {
