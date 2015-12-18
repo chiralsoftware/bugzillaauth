@@ -7,7 +7,7 @@
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
         <!-- Baseline Jenkins version you use to build and test the plugin. Users must have this version or newer to run. -->
-        <version>1.635</version>
+        <version>1.642</version>
         <relativePath/>
     </parent>
     <groupId>chiralsoftware.bugzillaauth</groupId>
@@ -57,6 +57,12 @@
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
+            </plugin>
+            <!-- Adding this, with extensions=true, means we don't need to modify settings.xml to build -->
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <extensions>true</extensions>
             </plugin>
         </plugins>
     </build>
